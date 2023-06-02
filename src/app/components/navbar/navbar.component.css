@@ -1,0 +1,16 @@
+span{
+    align-self: center;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-hover{
+    transition: all .2s ease;
+}
+
+.btn-hover:hover{
+    color: aliceblue;
+}
