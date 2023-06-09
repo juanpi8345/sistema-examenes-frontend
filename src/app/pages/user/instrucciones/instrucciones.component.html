@@ -1,0 +1,39 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <mat-card class="mt-3 p-2">
+                    <mat-card-header>
+                        <mat-card-title>Lea las instrucciones de esta pagina</mat-card-title>
+                        <mat-card-subtitle>Un paso mas para ir</mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-content class="mt-2">
+                        <h1><b>{{examen.titulo}}</b></h1>
+                        <p>{{examen.descripcion}}</p>
+                        <mat-divider></mat-divider>
+                        <h1 class="mt-3">Instrucciones importantes</h1>
+                        <ul>
+                            <li class="mt-1">Este cuestionario es solo para fines practicos</li>
+                            <li class="mt-1">Tiene que enviar el examen en <b>{{examen.numeroDePreguntas * 2}} minutos</b></li>
+                            <li class="mt-1">Tiene los intentos que quiera</li>
+                            <li class="mt-1">Hay <b>{{examen.puntosMaximos / examen.numeroDePreguntas}}</b> puntos por pregunta</li>
+                        </ul>
+                        <mat-divider></mat-divider>
+                        <h1 class="mt-2">Intentos de la prueba</h1>
+                        <ul>
+                            <li class="mt-1">Presione el boton <b>Empezar</b> para iniciar el examen</li>
+                            <li class="mt-1">El tiempo comenzara en el momento que haga click en el boton de empezar</li>
+                            <li class="mt-1">No puede reanudar el examen si se interrumpe por algun motivo</li>
+                            <li class="mt-1">Vaya hacia abajo para pasar a la siguiente pregunta</li>
+                            <li class="mt-1">Haga click en el boton enviar examen al finalizar</li>
+                            <li class="mt-1">El informe del examen se genera automaticamente en formato PDF</li>
+                        </ul>
+                    </mat-card-content>
+                    <mat-card-actions class="justify-content-center mt-3">
+                        <button mat-raised-button color="primary" (click)="empezarExamen()">Empezar</button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,42 @@
+<h1 class="mt-4 aparecer">Preguntas de {{titulo}}</h1>
+<div class="bootstrap-wrapper aparecer">
+    <div class="row">
+        <div class="col-md-12">
+            <mat-card *ngFor="let p of preguntas; let i = index" class="mt-3">
+                <mat-card-content>
+                    <p>
+                        <b>{{i + 1}}</b>
+                        <span class="ms-3" [innerHTML]="p.contenido"></span>
+                    </p>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p>1) <b>{{p.opcion1}}</b></p>
+                            </div>
+                            <div class="col-md-6">
+                                <p>2) <b>{{p.opcion2}}</b></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p>3) <b>{{p.opcion3}}</b></p>
+                            </div>
+                            <div class="col-md-6">
+                                <p>4) <b>{{p.opcion4}}</b></p>
+                            </div>
+                        </div>
+                        <mat-divider></mat-divider>
+                        <p class="mt-3">Respuesta correcta: {{p.respuesta}}</p>
+                    </div>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-button (click)="eliminarPregunta(p.preguntaId)" color="warn">Eliminar</button>
+                    <button mat-button [routerLink]="'/admin/pregunta/'+p.preguntaId" color="primary">Actualizar</button>
+                </mat-card-actions>
+            </mat-card>
+            <div class="container text-center mt-4">
+                <button mat-raised-button color="primary" [routerLink]="'/admin/add-pregunta/'+examenId + '/'+titulo">Agregar pregunta</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -9,46 +9,13 @@ body {
 
 }
 
-.full-width{
-    width: 100%;
+mat-icon{
+    vertical-align: middle;
 }
 
-.ml70{
-    margin-left: 70px !important;
+.inline-flex{
+    display: inline-flex!important;
 }
-
-.ml20{
-    margin-left: 20px !important;
-}
-
-.mr20{
-    margin-right: 20px !important;
-}
-
-.mt10{
-    margin-top: 20px !important;
-}
-
-.mb20{
-    margin-bottom: 20px !important;
-}
-
-.ml10{
-    margin-left: 10px !important;
-}
-
-.mr10{
-    margin-right: 10px !important;
-}
-
-.mt10{
-    margin-top: 10px !important;
-}
-
-.mb10{
-    margin-bottom: 10px !important;
-}
-
 
 .aparecer{
     animation: aparecer 1s forwards;

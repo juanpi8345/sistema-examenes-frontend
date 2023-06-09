@@ -41,7 +41,7 @@ export class LoginComponent {
         this.loginService.loginStatusSubject.next(true);
        }else if(this.loginService.getUserRol() == "NORMAL"){
         //dashboard user
-        this.router.navigate(['user']);
+        this.router.navigate(['user/0']);
         this.loginService.loginStatusSubject.next(true);
        }else{
         this.loginService.logOut();

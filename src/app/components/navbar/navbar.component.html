@@ -1,14 +1,14 @@
 <mat-toolbar color="primary">
     <div class="container-fluid d-flex justify-content-between">
         <div class="d-flex align-self-center">
-            <a [routerLink]="'/'" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+            <a [routerLink]="'/'" mat-icon-button class="example-icon inline-flex " aria-label="Example icon-button with menu icon">
                 <mat-icon>menu_books</mat-icon>
             </a>
             <span>Portal de examenes</span>
         </div>
         <div class="align-self-center">
             <a *ngIf="!loginService.isLoggedIn()" 
-            [routerLink]="'/login'" class="mr20 fs-6 btn-hover">
+            [routerLink]="'/login'" class="me-2 fs-6 btn-hover">
                 Iniciar sesion
             </a>
             <a *ngIf="!loginService.isLoggedIn()" 
@@ -17,7 +17,6 @@
             </a>
             <button *ngIf="loginService.isLoggedIn()" 
             mat-button
-            routerLink="/admin/profile"
             class="fs-6 btn-hover">
                {{loginService.getUser().username}}
             </button>
